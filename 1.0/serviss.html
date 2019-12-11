@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" src="serviss.css" type="text/css"  href="serviss.css"/>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script src="serviss.js">
+	$("input").on("change", function() {
+    this.setAttribute(
+        "data-date",
+        moment(this.value, "YYYY-MM-DD")
+        .format( this.getAttribute("data-date-format") )
+    )
+}).trigger("change") 
+
+
+</script>
+	<div class="body">
+		<div class="page">	
+			 <div class="header">
+                <img src="index.png"> 
+            </div>
+            <div class="text">
+            <form action="serviss.php"  method="post" > 
+            	<form action="pdf.php" method="post">
+            	<div class="ievade">
+		Pasūtijuma numurs : <input type="text" size="5" name="pasutijuma_nummurs"> <br><br> 
+		Pieņemšanas datums : <input type="date" data-date="" data-date-format="DD MMMM YYYY" name="datums"> <br><br> 
+		Pieņemšanas vieta : <select name="vieta">
+                               <option value="Ausekļa iela 9"> Ausekļa iela 9 </option>
+		                    </select>  <br><br>
+		Pieņēma : <select name="pienema" >
+                    <option value="Māris"> Māris </option>
+                    <option value="Toms"> Toms </option>			
+		          </select>    <br> <br>
+		Klienta vārds : <input type="text" size="5" name="vards"> <br><br> 
+		Klienta uzvārds : <input type="text" name="uzvards" size="5">  <br><br>
+		Klienta tel.nr.: <input type="tel" name="telefons" size="5"> <br><br> 
+		Klienta e-pasts: <input type="text" name="email"> 
+
+		<br><br>
+
+		Iekārtas veids: <input type="text" name="veids" size="5"> <br><br>
+		Parole: <input type="text" name="parole" size="5"> <br><br> 
+	
+	
+		Garantija: <select name="garantija">
+		              <option value="Ir"> Ir </option> 
+		              <option value="Nav"> Nav </option>
+		          </select> <br>
+		  
+		
+
+		           <br> <br>
+	
+
+		Papildaprīkojums: <input type="text" name="papildaprikojums" >   <br><br>
+		Papildus informācija: <input type="text" name="informacija">
+		 <br> <br>
+		Saglabājamā informācija: <input type="text" name="saglabajama_info"> 
+		<br> <br>
+		Defekta apraksts: <input type="text" name="defekts">        
+    </div>
+        </div>
+    
+	
+
+        </div>
+	
+	<input type="submit"  value="Insert" />
+     <input type="reset" value="Clear">
+   <button type="submit" formaction="http://localhost/edit.php">Rediģēšanas datubāzē</button>   
+   <button type="submit" formaction="http://localhost/search.php">Meklēšana datu bāzē </button>
+   
+</form>
+  </form>
+ </div>
+</div>
+</script>
+</body>
+</html>
