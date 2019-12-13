@@ -5,7 +5,7 @@
  <style>
 li {list-style: none;}
 </style>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
+<script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript"> 
 $(document).ready(function(){
     $("#table_id").find("tr").each(function(){
