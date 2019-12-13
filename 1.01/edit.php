@@ -19,7 +19,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#table_id").find("tr").each(function(){
          $("td").filter(function()  {
-                return $(this).text() === "dia";
+                return $(this).text() === "diag";
             }).parent().addClass("diagnostika");
         });
     });
@@ -37,7 +37,7 @@ $(document).ready(function(){
 $(document).ready(function(){
     $("#table_id").find("tr").each(function(){
          $("td").filter(function()  {
-                return $(this).text() === "atdods";
+                return $(this).text() === "atdots";
             }).parent().addClass("complete");
         });
     });
@@ -95,8 +95,8 @@ $(document).ready(function(){
 </ul>
 <ul>
     <h1>Šādi statusi ir jāievada:</h1>
-        "dia" = diagnostika. <br>
-        "atdods" = atdods klientam. <br>
+        "diag" = diagnostika. <br>
+        "atdots" = atdods klientam. <br>
         "parads" = Cilvēks nav atdevis naudu pēc iekārtas atdošanas. <br>
         "gatavs" = Gatavs, bet vēl servisā <br>
         "garantija" = Cilvēka ir garantija <br>
@@ -176,7 +176,7 @@ $query = "SELECT DISTINCT * FROM serviss order by pasutijuma_nummurs desc";
          ;
          
        
-         echo " <tr class=\"(pienemts == \"serviss\" ? \"pienemts\" : \"\")\", class=\"(dia == \"diagnostika\" ? \"dia\" : \"\")\", class=\"(gatavs == \"done\" ? \"gatavs\" : \"\")\", class=\"(complete == \"atdods\" ? \"atdods\" : \"\")\", class=\"(debt == \"parads\" ? \"parads\" : \"\")\", class=\"(warranty == \"garantija\" ? \"garantija\" : \"\")\" >
+         echo " <tr class=\"(pienemts == \"serviss\" ? \"pienemts\" : \"\")\", class=\"(diag == \"diagnostika\" ? \"diag\" : \"\")\", class=\"(gatavs == \"done\" ? \"gatavs\" : \"\")\", class=\"(complete == \"atdots\" ? \"atdots\" : \"\")\", class=\"(debt == \"parads\" ? \"parads\" : \"\")\", class=\"(warranty == \"garantija\" ? \"garantija\" : \"\")\" >
          <td>$row[0]</td>
          <td>$row[1]</td>
          <td>$row[2]</td>
