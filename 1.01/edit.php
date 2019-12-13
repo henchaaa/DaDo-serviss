@@ -62,6 +62,7 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+    <a href="http://192.168.8.119/serviss.html" class="button">Home</a>
 <ul>
 <form name="display" action="edit.php" method="POST" >
 
@@ -96,10 +97,10 @@ $(document).ready(function(){
 <ul>
     <h1>Šādi statusi ir jāievada:</h1>
         "diag" = diagnostika. <br>
-        "atdots" = atdods klientam. <br>
+        "atdots" = atdots klientam. <br>
         "parads" = Cilvēks nav atdevis naudu pēc iekārtas atdošanas. <br>
         "gatavs" = Gatavs, bet vēl servisā <br>
-        "garantija" = Cilvēka ir garantija <br>
+        "garantija" = Ierīcei ir garantija <br>
         <p> Neaizmirstat ievadīt visus izmaiņas lauciņus. Sorry not sorry</p>
 </ul>
 
@@ -139,7 +140,7 @@ $query = "SELECT DISTINCT * FROM serviss order by pasutijuma_nummurs desc";
         $query = "UPDATE serviss SET meistara_izdevumi = '$_POST[update5]' WHERE $_POST[columnu] = '$_POST[searchu]' ";
         $result = pg_query($query);
 
-        $query = "SELECT DISTINCT * FROM serviss order by pasutijuma_nummurs desc";
+        $query = "SELECT DISTINCT * FROM serviss order by pasutijuma_nummurs desc LIMIT 30";
     $result = pg_query($query) or die('Error message: ' . pg_last_error());
 
     

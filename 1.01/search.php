@@ -65,12 +65,12 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+    <a href="http://192.168.8.119/serviss.html" class="button">Home</a>
 <ul>
 <form name="display" action="search.php" method="POST" >
 
 <li>Meklēšana</li>
  <select name="column">
-    <option value="" > Kārtot pēc...........</option>
     <option value="pasutijuma_nummurs"> Pasutijuma nummura </option>
     <option value="telefons"> Telefona numura </option>
     <option value="vards"> Vārda </option>
@@ -97,6 +97,7 @@ $(document).ready(function(){
 
     $query = "SELECT * FROM serviss WHERE $_POST[column] = '$_POST[search]'";
     $result = pg_query($query) or die('Error message: ' . pg_last_error());
+
      
       echo "<table id=\"table_id\">";
         echo "<tr>  <th>Pasutijuma nummurs</th>
@@ -169,3 +170,4 @@ $(document).ready(function(){
 
 </body>
 </html>
+
