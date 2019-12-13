@@ -1,4 +1,4 @@
-html>
+<html>
  <head>  <title>Datu bāzes meklēšana</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="search.css">
@@ -101,7 +101,7 @@ $(document).ready(function(){
         "gatavs" = Gatavs, bet vēl servisā <br>
         "garantija" = Cilvēka ir garantija <br>
         <p> Neaizmirstat ievadīt visus izmaiņas lauciņus. Sorry not sorry</p>
-
+</ul>
 
 
  <?php
